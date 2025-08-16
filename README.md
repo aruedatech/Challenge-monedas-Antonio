@@ -1,12 +1,16 @@
 💱 Convertidor de Monedas en Java
 
-🔹 Funcionalidades
+Este proyecto es un convertidor de monedas desarrollado en Java, que permite consultar tasas de cambio en tiempo real mediante la API de ExchangeRate.
+Utiliza Gson para procesar respuestas JSON y cuenta con un menú interactivo en consola, ofreciendo una experiencia completa para el usuario.
 
-Consultar tasa de conversión entre cualquier par de monedas.
+🔹Funcionalidades
 
-Menú interactivo en consola.
+Consultar la tasa de conversión entre cualquier par de monedas soportadas por la API.
+Filtrado de monedas específicas (ARS, BOB, BRL, CLP, COP, USD).
+Menú interactivo en consola para convertir monedas o salir.
 Manejo de errores por códigos inválidos o problemas de conexión.
-Código modular: Main, Consultar, Convertir y Moneda.
+Código modular: Main, ConsultarMoneda, ConvertirMoneda, Moneda.
+Uso de buenas prácticas de programación: métodos específicos, modularidad y pruebas exhaustivas.
 
 ⚙️ Requisitos
 
@@ -27,7 +31,17 @@ Challenge-monedas-Antonio/
 │   └── Moneda.java
 └── README.md
 
-🖥️ Cómo usar
+🧩 Fases del proyecto
+
+HttpRequest: Configuración de solicitudes HTTP para la API de ExchangeRate.
+HttpResponse: Gestión de respuestas, análisis de códigos de estado, encabezados y cuerpo JSON.
+Gson y JSON: Mapeo de respuestas JSON a objetos Java usando JsonObject y JsonParser.
+Filtrado de monedas: Selección de monedas específicas mediante el atributo "Currency Code".
+Conversión de monedas: Implementación de la lógica para calcular los valores convertidos usando las tasas obtenidas.
+Interfaz de usuario: Menú interactivo en consola con Scanner, pruebas exhaustivas y manejo de errores.
+
+🖥️ Cómo usar 
+
 Desde consola
 
 javac -cp ".;lib\gson-2.10.1.jar" -d out src\*.java
