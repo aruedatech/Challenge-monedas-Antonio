@@ -2,10 +2,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 @SuppressWarnings("ALL")
-public class ConvertirMoneda {
+public class Convertir {
 
     // Método que realiza la conversión de monedas
-    public static void convertir(String from, String to, ConsultarMoneda consulta, Scanner scanner) {
+    public static void convertir(String from, String to, Consultar consulta, Scanner scanner) {
         try {
             // Buscar información de la moneda usando la API
             Moneda moneda = consulta.buscarMoneda(from, to);
@@ -46,7 +46,7 @@ public class ConvertirMoneda {
     }
 
     // Método que pide al usuario los códigos de moneda y luego llama a convertir()
-    public static void convertirMoneda(ConsultarMoneda consulta, Scanner scanner) {
+    public static void convertirMoneda(Consultar consulta, Scanner scanner) {
         System.out.print("Ingrese el código de la moneda de origen (ej: USD): ");
         String from = scanner.nextLine().toUpperCase();
 

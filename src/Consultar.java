@@ -7,7 +7,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 @SuppressWarnings("ALL")
-public class ConsultarMoneda {
+public class Consultar {
 
     public Moneda buscarMoneda(String from, String to) {
         try {
@@ -40,5 +40,12 @@ public class ConsultarMoneda {
             System.out.println("No se pudo obtener la tasa de cambio. Revisa los códigos de moneda o tu conexión. ❌");
             return null;
         }
+    }
+
+    // 👇 Aquí sí es válido
+    public static void main(String[] args) {
+        Consultar consulta = new Consultar();
+        Moneda moneda = consulta.buscarMoneda("USD", "MXN");
+        System.out.println(moneda);
     }
 }

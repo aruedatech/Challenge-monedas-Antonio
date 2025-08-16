@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ConsultarMoneda consulta = new ConsultarMoneda();
+        Consultar consulta = new Consultar();
 
         System.out.println("===== BIENVENIDO AL CONVERTIDOR DE MONEDAS =====");
 
@@ -20,7 +20,7 @@ public class Main {
 
             switch (opcion) {
                 case "1":
-                    ConvertirMoneda.convertirMoneda(consulta, scanner);
+                    Convertir.convertirMoneda(consulta, scanner);
                     break;
                 case "2":
                     continuar = false;
