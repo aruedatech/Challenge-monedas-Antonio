@@ -42,7 +42,6 @@ public class Consultar {
         }
     }
 
-    // 👇 Aquí sí es válido
     public static void main(String[] args) {
         Consultar consulta = new Consultar();
         Moneda moneda = consulta.buscarMoneda("USD", "MXN");
